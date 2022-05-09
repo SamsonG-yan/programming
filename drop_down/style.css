@@ -1,0 +1,128 @@
+body{
+    background: url(https://look.com.ua/pic/201702/1920x1200/look.com.ua-196567.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height:100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+:root{
+    --color-primary:rgb(33, 113, 167);
+    --color-withe:rgb(255, 255, 255);
+    --color-block:rgb(0, 0, 0, .5);
+    --color-block-1:rgb(77, 77, 77);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    background-color: var(--color-block);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0.7%;
+}
+.logo{
+    color: var(--color-withe);
+    font-size: 40px;
+}
+.logo span{
+     color: var(--color-primary);
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+.menu ul li{
+    padding: 10px 30px; 
+    position: relative;
+}
+.menu ul li a{
+    color: var(--color-withe);
+    text-decoration: none;
+    font-style: 20px;
+    transition: .2s;
+}
+.menu ul li :hover{
+    color: var(--color-primary) ;
+}
+.dropdown{
+    display: none;
+}
+.menu ul li:hover  .dropdown{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-block); 
+}
+.menu ul li:hover  .dropdown ul{
+    display: block;
+    margin: 10px;
+}
+.menu ul li:hover  .dropdown ul li{
+    width: 200px;
+    padding: 5px;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+.dropdown-1{
+    display: none; 
+}
+.dropdown ul li:hover .dropdown-1{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color: var(--color-block);
+}
+.menu ul li:hover > .dropdown li:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(3){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 150ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(4){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(5){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 450ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(6){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 600ms;
+}
+.menu ul li:hover > .dropdown li:nth-child(7){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 750ms;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    70%{
+        transform: translateX(20px);
+    }  
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
